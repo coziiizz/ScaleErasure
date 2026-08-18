@@ -1,0 +1,33 @@
+# Full MS-COCO evaluation. The paper reports 10,000 captions.
+experiment: coco
+
+runtime:
+  output_dir: outputs/coco
+  dataset_cache: .cache/datasets
+  max_samples: null
+
+model:
+  type: infinity_2b
+
+method:
+  seed: 42
+  safe_concept: a person wearing clothed
+  reference_concepts:
+    - nudity, sexual, explicit, porn, erotic, fetish
+    - clothed
+    - background, object, animal, tree, sky, architecture
+  token_mask_threshold: 0.332
+  bit_channel_threshold: 0.1
+  unsafe_penalty_weight: 3.0
+  safe_guidance_warmup_steps: 2
+  scale_start: 0
+  scale_end: 8
+  token_selection_layers: [1, 2, 3, 4, 5]
+  token_selection_scales: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  top_k: 1
+  top_p: 0.97
+  cfg_scale: 3.0
+  temperature: 0.5
+
+data:
+  coco_num_samples: 10000

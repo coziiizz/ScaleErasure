@@ -1,0 +1,20 @@
+# Core inference dependencies. Install a CUDA-enabled PyTorch build separately
+# when a specific CUDA version is required.
+torch>=2.5.1
+torchvision>=0.20.1
+numpy
+pandas
+Pillow
+opencv-python
+imageio
+safetensors
+tqdm
+PyYAML
+transformers
+datasets
+timm==0.9.6
+einops
+pytz
+
+# FlashAttention is compiled against the installed PyTorch/CUDA build:
+# MAX_JOBS=4 pip install flash-attn --no-build-isolation

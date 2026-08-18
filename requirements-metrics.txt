@@ -1,0 +1,5 @@
+# Optional evaluation dependencies. Install after requirements.txt when needed.
+open_clip_torch
+pytorch-fid
+lpips
+nudenet

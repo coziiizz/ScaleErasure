@@ -1,0 +1,48 @@
+# Python and local tooling
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+.DS_Store
+
+# Environments and local configuration
+.venv/
+*.egg-info/
+.env
+.env.*
+
+# Checkpoints, datasets, caches, and generated results
+weights/
+checkpoints/
+datasets_cache/
+.cache/
+outputs/
+results/
+wandb/
+local_output/
+*.pth
+*.pth.tar
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.arrow
+*.pkl
+*.pickle
+*.npz
+*.tar.gz
+*.zip
+
+# Logs and temporary files
+*.log
+*.hydra/
+.coverage
+htmlcov/
+tmp/
+temp/
+.git_disabled/
