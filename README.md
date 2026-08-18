@@ -11,7 +11,7 @@ ScaleErasure is an inference-time concept-erasure method for Infinity. It keeps
 the pretrained weights frozen and applies selective logits guidance over the
 scale, token, and bit-channel dimensions. This release contains the public
 inference path and the minimal Infinity runtime required to reproduce the
-paper experiments; training code and generated artifacts are not included.
+paper experiments.
 
 ## Repository layout
 
@@ -21,7 +21,6 @@ paper experiments; training code and generated artifacts are not included.
 ├── configs/                       # Paper I2P and MS-COCO configurations
 ├── scripts/run_scaleerasure.py    # YAML launcher
 ├── scripts/export_token_masks.py  # Token-mask inspection utility
-├── scaleerasure_inference.py      # Public command-line entry point
 ├── tools/run_infinity.py          # Infinity model-loading utilities
 ├── infinity/                      # Minimal Infinity inference runtime
 ├── DockerFile                     # CUDA 11.8 container recipe

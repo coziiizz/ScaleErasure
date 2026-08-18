@@ -44,7 +44,8 @@ def build_command(config: dict[str, Any]) -> list[str]:
 
     command = [
         sys.executable,
-        str(ROOT / "scaleerasure_inference.py"),
+        "-m",
+        "scaleerasure.cli",
         "--exp",
         str(experiment),
         "--model_type",
